@@ -1,0 +1,32 @@
+version: "3.5"
+
+volumes:
+  mariadb:
+
+services:
+  db:
+    env_file: .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+    image: mariadb
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - mariadb:/var/lib/mysql
+  app:
+    depends_on:
+      - db
+    env_file: .env
+    environment:
+      - DB_HOST=db
+      - WP_SITEURL=${WP_HOME}/wp
+      - PHP_DISPLAY_ERRORS=1
+      - WEB_DOCUMENT_ROOT=/app/web
+      - LOG_STDERR=/app/logs/error.log
+    image: webdevops/php-apache-dev:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app:cached

@@ -1,0 +1,49 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+!web/app/plugins/auto-cloudinary
+
+######################
+# WMPL #
+######################
+!web/app/plugins/wpml-translation-management
+!web/app/plugins/wpml-media-translation
+!web/app/plugins/wpml-string-translation
+!web/app/plugins/acfml
+
+web/app/mu-plugins/*/
+!web/app/mu-plugins/tfd-core/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+!vendor/.gitkeep
+
+*.log
+
+# WP-CLI
+wp-cli.local.yml
+
+######################
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.localized
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+.vscode
