@@ -89,3 +89,41 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+* Settings / Filters for Auto Cloudinary Plugin
+* more infor: https://github.com/junaidbhura/auto-cloudinary/wiki/Filters
+*/
+if (function_exists('cloudinary_url')) {
+    dlog('CLOUDINARY_CLOUD_NAME', CLOUDINARY_CLOUD_NAME);
+    // Filter the Cloud Name option.
+    add_filter('cloudinary_cloud_name', function ($cloud_name) {
+        return defined(CLOUDINARY_CLOUD_NAME) ? CLOUDINARY_CLOUD_NAME : $cloud_name;
+    });
+
+    // Filter the Auto Mapping Folder o ption.
+    add_filter('cloudinary_auto_mapping_folder', function ($auto_mapping_folder) {
+        return defined(CLOUDINARY_AUTO_MAPPING_FOLDER) ? CLOUDINARY_AUTO_MAPPING_FOLDER : $auto_mapping_folder;
+    });
+
+    // Filter the URLs option.
+    add_filter('cloudinary_urls', function ($urls) {
+        if (!is_array($urls)) {
+            $urls = [$urls];
+        }
+        if (defined(CLOUDINARY_URL)) {
+            $urls[] = CLOUDINARY_URL;
+        }
+        return $urls;
+    });
+
+    // Filter the Content Images option.
+    add_filter('cloudinary_content_images', function ($content_images) {
+        return defined(CLOUDINARY_CONTENT_IMAGES) ? CLOUDINARY_CONTENT_IMAGES : $content_images;
+    });
+
+    // Change the URL path to your images folder due to relative URLs
+    add_filter('cloudinary_upload_url', function ($upload_url) {
+        return str_replace(get_home_url(), '', $upload_url);
+    });
+}

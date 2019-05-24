@@ -15,3 +15,9 @@ ini_set('display_errors', 1);
 
 // Enable plugin and theme updates and installation from the admin
 Config::define('DISALLOW_FILE_MODS', false);
+
+// Auto Cloudinary
+Config::define('CLOUDINARY_CLOUD_NAME', 'ddbjzcqp4');
+Config::define('CLOUDINARY_AUTO_MAPPING_FOLDER', 'bedrock');
+Config::define('CLOUDINARY_URL', 'https://res.cloudinary.com');
+Config::define('CLOUDINARY_CONTENT_IMAGES', true);
