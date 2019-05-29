@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b2ef0d832a6b6656e463207330cb535",
+    "content-hash": "4dc580d264462103c0d86381415f5180",
     "packages": [
         {
             "name": "anthonybudd/wp_model",
@@ -156,6 +156,176 @@
             "time": "2018-08-27T06:10:37+00:00"
         },
         {
+            "name": "doctrine/inflector",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/5527a48b7313d15261292c149e55e26eae771b0a",
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "inflection",
+                "pluralize",
+                "singularize",
+                "string"
+            ],
+            "time": "2018-01-09T20:05:19+00:00"
+        },
+        {
+            "name": "doctrine/instantiator",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3,<8.0-DEV"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1.8",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://github.com/doctrine/instantiator",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2015-06-14T21:17:01+00:00"
+        },
+        {
+            "name": "log1x/acf-fluent-helpers",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/acf-fluent-helpers.git",
+                "reference": "b88ad98a6d19a1896a6b0c194a890369f2df505f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/acf-fluent-helpers/zipball/b88ad98a6d19a1896a6b0c194a890369f2df505f",
+                "reference": "b88ad98a6d19a1896a6b0c194a890369f2df505f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "log1x@log1x.com",
+                    "homepage": "https://log1x.com"
+                }
+            ],
+            "description": "Simple set of helper functions for ACF Fluent auto-loaded with Composer using generic function names. ",
+            "homepage": "https://github.com/log1x/acf-fluent-helpers",
+            "keywords": [
+                "acf",
+                "fluent",
+                "helper",
+                "interface",
+                "wordpress",
+                "wrapper"
+            ],
+            "time": "2017-08-26T02:03:18+00:00"
+        },
+        {
             "name": "oscarotero/env",
             "version": "v1.2.0",
             "source": {
@@ -249,6 +419,51 @@
             "time": "2015-07-25T16:39:46+00:00"
         },
         {
+            "name": "roots/soil",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/soil.git",
+                "reference": "794226e0ff555c5c0199fef9ae59621e656fb540"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/soil/zipball/794226e0ff555c5c0199fef9ae59621e656fb540",
+                "reference": "794226e0ff555c5c0199fef9ae59621e656fb540",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2019-05-24T21:42:07+00:00"
+        },
+        {
             "name": "roots/wordpress",
             "version": "5.2.1",
             "source": {
@@ -288,16 +503,16 @@
         },
         {
             "name": "roots/wordpress-core-installer",
-            "version": "dev-master",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress-core-installer.git",
-                "reference": "0a5edbb6b49d76a5d61e30a4202a142bf8d8956f"
+                "reference": "83744b1ba5bbdb5bb225f47e24da61a6cf6c5b80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/wordpress-core-installer/zipball/0a5edbb6b49d76a5d61e30a4202a142bf8d8956f",
-                "reference": "0a5edbb6b49d76a5d61e30a4202a142bf8d8956f",
+                "url": "https://api.github.com/repos/roots/wordpress-core-installer/zipball/83744b1ba5bbdb5bb225f47e24da61a6cf6c5b80",
+                "reference": "83744b1ba5bbdb5bb225f47e24da61a6cf6c5b80",
                 "shasum": ""
             },
             "require": {
@@ -340,7 +555,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-12-10T00:25:29+00:00"
+            "time": "2018-12-10T00:22:15+00:00"
         },
         {
             "name": "roots/wp-config",
@@ -442,8 +657,98 @@
             "time": "2016-03-01T16:27:06+00:00"
         },
         {
-            "name": "symfony/polyfill-ctype",
+            "name": "samrap/acf-fluent",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samrap/acf-fluent.git",
+                "reference": "fb612e9f99fcdc2ee042bc915d9de90b83ff1d52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samrap/acf-fluent/zipball/fb612e9f99fcdc2ee042bc915d9de90b83ff1d52",
+                "reference": "fb612e9f99fcdc2ee042bc915d9de90b83ff1d52",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Samrap\\Acf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Rapaport",
+                    "email": "me@samrapdev.com"
+                }
+            ],
+            "description": "A fluent interface for the Advanced Custom Fields WordPress plugin",
+            "keywords": [
+                "acf",
+                "fluent",
+                "helper",
+                "interface",
+                "wordpress",
+                "wrapper"
+            ],
+            "time": "2019-01-29T00:03:20+00:00"
+        },
+        {
+            "name": "stoutlogic/acf-builder",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StoutLogic/acf-builder.git",
+                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
+                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "~1.1",
+                "doctrine/instantiator": "~1.0.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpdocumentor/reflection-docblock": "2.*",
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "StoutLogic\\AcfBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Pfisterer",
+                    "email": "steve@stoutlogic.com"
+                }
+            ],
+            "description": "An Advanced Custom Field Configuration Builder",
+            "time": "2018-09-14T16:55:15+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -505,12 +810,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/21stdigital/tfd-model.git",
-                "reference": "455e216742716c68f2266537dc11e9866074930a"
+                "reference": "601beb12c17835bccba5cbddb29fc280959c2b09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/21stdigital/tfd-model/zipball/455e216742716c68f2266537dc11e9866074930a",
-                "reference": "455e216742716c68f2266537dc11e9866074930a",
+                "url": "https://api.github.com/repos/21stdigital/tfd-model/zipball/601beb12c17835bccba5cbddb29fc280959c2b09",
+                "reference": "601beb12c17835bccba5cbddb29fc280959c2b09",
                 "shasum": ""
             },
             "require": {
@@ -561,20 +866,20 @@
                 }
             ],
             "description": "Wordpress data handling",
-            "time": "2019-05-22T16:44:11+00:00"
+            "time": "2019-05-28T09:51:21+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "dev-master",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "ffcaf1dfee56c8830d83d9812efad2a98c08f02e"
+                "reference": "dbcc609971dd9b55f48b8008b553d79fd372ddde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/ffcaf1dfee56c8830d83d9812efad2a98c08f02e",
-                "reference": "ffcaf1dfee56c8830d83d9812efad2a98c08f02e",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/dbcc609971dd9b55f48b8008b553d79fd372ddde",
+                "reference": "dbcc609971dd9b55f48b8008b553d79fd372ddde",
                 "shasum": ""
             },
             "require": {
@@ -613,7 +918,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-03-23T10:56:16+00:00"
+            "time": "2019-03-06T09:39:45+00:00"
         },
         {
             "name": "wpackagist-plugin/auto-cloudinary",
@@ -636,6 +941,48 @@
             "homepage": "https://wordpress.org/plugins/auto-cloudinary/"
         },
         {
+            "name": "wpackagist-plugin/commonwp",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/commonwp/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/commonwp.zip?timestamp=1551039634",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/commonwp/",
+            "time": "2019-02-24T20:20:34+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/disable-emojis",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-emojis/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-emojis.zip?timestamp=1534070784",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-emojis/",
+            "time": "2018-08-12T10:46:24+00:00"
+        },
+        {
             "name": "wpackagist-plugin/fly-dynamic-image-resizer",
             "version": "2.0.5",
             "source": {
@@ -654,6 +1001,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/fly-dynamic-image-resizer/"
+        },
+        {
+            "name": "wpackagist-plugin/transients-manager",
+            "version": "1.7.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/transients-manager/",
+                "reference": "tags/1.7.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/transients-manager.1.7.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/transients-manager/"
         }
     ],
     "packages-dev": [
@@ -859,16 +1226,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "dev-master",
+            "version": "3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "99091cada94f6d22aa2ba4e4a986ec7571a2d07c"
+                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/99091cada94f6d22aa2ba4e4a986ec7571a2d07c",
-                "reference": "99091cada94f6d22aa2ba4e4a986ec7571a2d07c",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
+                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
                 "shasum": ""
             },
             "require": {
@@ -906,16 +1273,21 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-05-23T21:59:35+00:00"
+            "time": "2019-04-10T23:49:02+00:00"
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "tfd/model": 20,
+        "wpackagist-plugin/disable-emojis": 20,
+        "roots/soil": 20,
+        "wpackagist-plugin/commonwp": 20,
+        "log1x/acf-fluent-helpers": 20,
+        "samrap/acf-fluent": 20,
         "roave/security-advisories": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.1"

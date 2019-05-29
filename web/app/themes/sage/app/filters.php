@@ -95,7 +95,6 @@ add_filter('comments_template', function ($comments_template) {
 * more infor: https://github.com/junaidbhura/auto-cloudinary/wiki/Filters
 */
 if (function_exists('cloudinary_url')) {
-    dlog('CLOUDINARY_CLOUD_NAME', CLOUDINARY_CLOUD_NAME);
     // Filter the Cloud Name option.
     add_filter('cloudinary_cloud_name', function ($cloud_name) {
         return defined(CLOUDINARY_CLOUD_NAME) ? CLOUDINARY_CLOUD_NAME : $cloud_name;

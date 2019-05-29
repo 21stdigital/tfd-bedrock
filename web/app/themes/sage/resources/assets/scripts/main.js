@@ -1,5 +1,6 @@
 // import external dependencies
 import 'jquery';
+import 'lazysizes/lazysizes.min.js'
 
 // Import everything from autoload
 import './autoload/**/*'

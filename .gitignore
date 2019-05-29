@@ -1,7 +1,13 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-!web/app/plugins/auto-cloudinary
+!web/app/plugins/advanced-custom-fields-pro
+
+######################
+# TFD FUNCTIONALITY #
+######################
+!web/app/plugins/tfd
+!web/app/plugins/tfd-functionality
 
 ######################
 # WMPL #
@@ -13,6 +19,7 @@ web/app/plugins/*
 
 web/app/mu-plugins/*/
 !web/app/mu-plugins/tfd-core/
+!web/app/mu-plugins/tfd-functionality/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep

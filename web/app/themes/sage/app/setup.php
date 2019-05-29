@@ -26,12 +26,17 @@ add_action('after_setup_theme', function () {
     /**
      * Enable features from Soil when plugin is activated
      * @link https://roots.io/plugins/soil/
+     * @link https://github.com/roots/soil
      */
-    add_theme_support('soil-clean-up');
-    add_theme_support('soil-jquery-cdn');
-    add_theme_support('soil-nav-walker');
-    add_theme_support('soil-nice-search');
-    add_theme_support('soil-relative-urls');
+    add_theme_support('soil-clean-up'); // Cleaner WordPress markup
+    add_theme_support('soil-disable-rest-api'); // Disable REST API
+    add_theme_support('soil-disable-asset-versioning'); // Disable asset versioning
+    add_theme_support('soil-disable-trackbacks'); // Disable trackbacks
+    add_theme_support('soil-js-to-footer'); // Move all JS to the footer
+    add_theme_support('soil-nav-walker'); //Cleaner walker for navigation menus
+    add_theme_support('soil-nice-search'); // Convert search results from /?s=query to /search/query/
+    add_theme_support('soil-relative-urls'); // Root relative URLs
+
 
     /**
      * Enable plugins to manage the document title
@@ -130,3 +135,14 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+
+/**
+ * Load Image Size and Image Size Groups
+ */
+// add_action('init', function () {
+//     $path = config('theme.dir') . '/app/ImageSizes/';
+//     collect(glob($path . '*.php'))->map(function ($field) {
+//         return require_once($field);
+//     });
+// }, 5);

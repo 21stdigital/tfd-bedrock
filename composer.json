@@ -30,6 +30,22 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.8.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+      }
     }
   ],
   "require": {
@@ -40,7 +56,14 @@
     "roots/wordpress": "^5.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "tfd/model": "dev-master"
+    "tfd/model": "@dev",
+    "wpackagist-plugin/disable-emojis": "dev-trunk",
+    "roots/soil": "dev-master",
+    "wpackagist-plugin/commonwp": "dev-trunk",
+    "log1x/acf-fluent-helpers": "dev-master",
+    "samrap/acf-fluent": "dev-master",
+    "wpackagist-plugin/transients-manager": "^1.7",
+    "stoutlogic/acf-builder": "^1.8"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
@@ -48,7 +71,13 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/auto-cloudinary", "wpackagist-plugin/fly-dynamic-image-resizer"],
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "roots/soil",
+        "wpackagist-plugin/disable-emojis",
+        "wpackagist-plugin/auto-cloudinary",
+        "wpackagist-plugin/fly-dynamic-image-resizer"
+      ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
@@ -62,5 +91,6 @@
       "phpcs"
     ]
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
