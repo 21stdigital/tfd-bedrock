@@ -18,7 +18,7 @@ $frontPage
     ])
     ->addFields($frontPage->partial('partials.image', [
         'image'=> [
-            'required' => TRUE,
+            'required' => true,
         ]
     ]))
     ->addFields($frontPage->partial('partials.text', []));

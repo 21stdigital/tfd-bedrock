@@ -25,11 +25,12 @@ class ACF extends FieldsBuilder
         dlog("Register 👋");
         if (function_exists('acf_add_local_field_group')) {
             $patterns = [
-                //__DIR__ . '/partials/*.php',
-                __DIR__ . '/modules/*.php',
-                __DIR__ . '/blocks/*.php',
-                __DIR__ . '/posts/*.php',
+                //'partials' => __DIR__ . '/partials/*.php',
+                'modules' => __DIR__ . '/modules/*.php',
+                'blocks' => __DIR__ . '/blocks/*.php',
+                'posts' => __DIR__ . '/posts/*.php',
             ];
+            $patterns = apply_filters('tfd_acf_location', $patterns);
             foreach ($patterns as $pattern) {
                 collect(glob($pattern))->map(function ($field) {
                     return require_once($field);

@@ -1,6 +1,9 @@
 <?php
 
+namespace TFD;
+
 use TFD\ACF;
+use TFD\CPT;
 
 /**
  * The plugin bootstrap file
@@ -51,7 +54,9 @@ if (!class_exists('TFD')) :
 
         public function init()
         {
+            dlog("MOIND");
             ACF\ACF::register();
+            CPT\CPT::register();
         }
     }
 

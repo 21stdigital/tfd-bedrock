@@ -35,7 +35,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.0",
+        "version": "5.8.1",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -63,7 +63,9 @@
     "log1x/acf-fluent-helpers": "dev-master",
     "samrap/acf-fluent": "dev-master",
     "wpackagist-plugin/transients-manager": "^1.7",
-    "stoutlogic/acf-builder": "^1.8"
+    "stoutlogic/acf-builder": "^1.8",
+    "cocur/slugify": "^3.2",
+    "johnbillion/extended-cpts": "^4.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
