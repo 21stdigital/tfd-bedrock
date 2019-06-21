@@ -31,7 +31,7 @@ use TFD\CPT;
  */
 
 // If this file is called directly, abort.
-if (!defined( 'WPINC')) {
+if (!defined('WPINC')) {
     die;
 }
 
@@ -54,9 +54,9 @@ if (!class_exists('TFD')) :
 
         public function init()
         {
-            dlog("MOIND");
             ACF\ACF::register();
             CPT\CPT::register();
+            dlog("TFD Plugin initialized... ✅");
         }
     }
 
@@ -75,5 +75,4 @@ if (!class_exists('TFD')) :
 
     // initialize
     tfd();
-
 endif;

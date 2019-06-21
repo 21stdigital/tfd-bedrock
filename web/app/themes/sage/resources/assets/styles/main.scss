@@ -1,4 +1,13 @@
+// Base
+@import "common/functions";
+@import "common/fonts";
 @import "common/variables";
+@import "common/breakpoints";
+@import "common/mixins";
+@import "common/typography";
+@import "common/grid";
+@import "common/global";
+
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -12,7 +21,6 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
-@import "common/global";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

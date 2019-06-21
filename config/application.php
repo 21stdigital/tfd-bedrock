@@ -101,6 +101,14 @@ Config::define('WP_DEBUG_DISPLAY', false);
 Config::define('SCRIPT_DEBUG', false);
 ini_set('display_errors', 0);
 
+
+/**
+ * Theme settings
+ */
+Config::define('TEXT_DOMAIN', 'teb');
+Config::define('TEXT_DOMAIN_BACKEND', 'teb-backend');
+
+
 /**
  * Allow WordPress to detect HTTPS when used behind a reverse proxy or a load balancer
  * See https://codex.wordpress.org/Function_Reference/is_ssl#Notes
@@ -123,3 +131,5 @@ Config::apply();
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+

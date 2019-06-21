@@ -1,5 +1,93 @@
-/** Colors */
-$brand-primary:         #525ddc;
+/** =======================================
+    Colors
+=========================================== */
+// Default Colors
+$c-black: #000;
+$c-white: #fff;
+$c-gray: #d8d8d8;
+$c-gray-dark: #262626;
+$c-magenta: #e20074;
+// Highlight Colors
+$c-highlight: $c-magenta;
+// Text Colors
+$c-text: $c-black;
+$c-text-invert: $c-white;
+$c-text-link: $c-hightlight;
+// Border
+$c-border: $c-black;
+$c-border-hightlight: $c-hightlight;
 
-/** Box Model  */
-$spacer:                2rem;
+/** =======================================
+    Borders
+=========================================== */
+$default-border: 1px solid $c-border;
+
+/** =======================================
+    Grid Settings
+=========================================== */
+// Max Container Width
+$max-container-width: 144rem;
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 31.25em,  // 500px
+  md: 48em,     // 768px
+  lg: 64em,     // 1024px
+  xl: 90em      // 1440px
+) !default;
+// Number of Grid Columns
+$grid-colums: 18;
+// Grid Column Width
+$grid-column-width: calc(1 / #{$grid-colums} * 100vw);
+$grid-column-width-max: calc(#{$max-container-width} / #{$grid-colums});
+
+/** =======================================
+    Margins and Gaps
+=========================================== */
+// Desktop
+$gaps-desktop: (
+  xxxs: 1rem,
+  xxs: 1.5rem,
+  xs: 2rem,
+  md: 3rem,
+  lg: 5rem,
+  xl: 7rem,
+  xxl: 10rem,
+  -xxxs: 1rem,
+  -xxs: 1.5rem,
+  -xs: 2rem,
+  -md: 3rem,
+  -lg: 5rem,
+  -xl: 7rem,
+  -xxl: 10rem,
+);
+// Tablet
+$gaps-tablet: $gaps-mobile;
+// Mobile
+$gaps-mobile: (
+  xxxs: 1rem,
+  xxs: 1rem,
+  xs: 1.5rem,
+  md: 2rem,
+  lg: 3rem,
+  xl: 3rem,
+  xxl: 7rem,
+  -xxxs: 1rem,
+  -xxs: 1rem,
+  -xs: 1.5rem,
+  -md: 2rem,
+  -lg: 3rem,
+  -xl: 3rem,
+  -xxl: 7rem,
+);
+
+/** =======================================
+    Z-Index Settings
+=========================================== */
+
+/** =======================================
+    Transition Settings
+=========================================== */
+$transition-duration: 0.3s;
+$transition-timing-function: ease-out;
+$transition-all: all $transition-duration $transition-timing-function;

@@ -1,11 +1,28 @@
 html {
   font-size: percentage(10/16);
+  -webkit-font-smoothing: antialiased;
+
+  // Smaller than iPhone X
+  // @media (max-width: 374.98px) {
+  //   font-size: calc(10 / 375 * 100vw);
+  // }
+  @media (max-width: 319.98px) {
+    font-size: calc(10 / 320 * 100vw);
+  }
 }
 
 body {
-  max-width: 102.4rem;
-  margin: 0 auto;
-  font-size: 1.6rem;
+  * {
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:not(.wp-admin) {
+    max-width: $max-content-width;
+  }
 }
 
 .Image {

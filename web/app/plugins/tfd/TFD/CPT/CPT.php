@@ -6,11 +6,12 @@ use Cocur\Slugify\Slugify;
 
 class CPT
 {
-    protected $id = null;
-    public $args = [];
-    protected $names = [];
+    protected static $id = null;
+    protected static $slug = null;
+    protected static $args = [];
+    protected static $names = [];
 
-    public $supports = [
+    public static $supports = [
         'title',
         'editor', // content
         'author',
@@ -26,45 +27,69 @@ class CPT
 
     public static function register()
     {
-        //if (function_exists('register_extended_post_type')) {
-            dlog(plugin_dir_path(__FILE__), plugin_basename(__FILE__));
+        if (function_exists('register_extended_post_type')) {
             $patterns = [
                 // 'cpt' => __DIR__ . '/modules/*.php',
-                'cpt' => '/app/web/app/plugins/tfd/CustomPostTypes/*.php',
+                '/app/web/app/plugins/tfd/CustomPostTypes/*.php',
             ];
             $patterns = apply_filters('tfd_cpt_location', $patterns);
             foreach ($patterns as $pattern) {
                 collect(glob($pattern))->map(function ($field) {
-                    dlog('FIELDS', $field);
                     return require_once($field);
                 })->map(function ($field) {
                     if ($field instanceof CPT) {
-                        $id = $field->getId();
-                        dlog($id);
-                        $names = $field->getNames();
-                        \register_extended_post_type($id, $field->args, $names);
+                        $id = $field::getId();
+                        $args = $field::getArgs();
+                        $names = $field::getNames();
+                        if (!array_key_exists('slug', $names)) {
+                            $names['slug'] = $field::getSlug();
+                        }
+                        \register_extended_post_type($id, $args, $names);
                     }
                 });
             }
-        // }
-    }
-
-
-    public function getId()
-    {
-        if ($this->id) {
-            return $this->id;
         }
-
-        $slugify = new Slugify();
-        return $slugify->slugify(basename(__FILE__, '.php'));
     }
 
+    public static function getName()
+    {
+        $reflection = new \ReflectionClass(get_called_class());
+        return basename($reflection->getFileName(), '.php');
+    }
 
-    public function getNames()
+    public static function getId()
+    {
+        if (self::$id) {
+            return self::$id;
+        }
+        $slugify = new Slugify();
+        return $slugify->slugify(self::getName());
+    }
+
+    public static function getArgs()
+    {
+        return self::$args;
+    }
+
+    public static function getNames()
     {
         return [
+            'singular' => self::getName(),
+            'plural' => self::getName() . 's',
+            'slug' => self::getSlug(),
         ];
+    }
+
+    /**
+     * Create a new model without calling the constructor.
+     *
+     * @return object
+     */
+    protected static function newWithoutConstructor()
+    {
+        $class = get_called_class();
+        $reflection = new \ReflectionClass($class);
+        return $reflection->newInstanceWithoutConstructor();
     }
 
     /**
@@ -77,13 +102,7 @@ class CPT
     public static function getSlug()
     {
         $model = self::newWithoutConstructor();
-
-        if (isset($model->id)) {
-            return $model->id;
-        } elseif (isset($model->name)) {
-            return $model->name;
-        }
-
-        throw new Exception('$postType not defined');
+        $slugify = new Slugify();
+        return $slugify->slugify($model::$slug ?: $model::getId());
     }
 }

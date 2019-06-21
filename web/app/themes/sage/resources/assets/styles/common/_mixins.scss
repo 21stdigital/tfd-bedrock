@@ -1,0 +1,195 @@
+/** =======================================
+    Device Breakpoints
+=========================================== */
+@mixin mobile() {
+  @include media-breakpoint-down(sm) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include media-breakpoint-up(md) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @include media-breakpoint-up(lg) {
+    @content;
+  }
+}
+
+@mixin desktop-max() {
+  @include media-breakpoint-up(xl) {
+    @content;
+  }
+}
+
+/** =======================================
+    Margins and Gaps
+=========================================== */
+@mixin margin-top($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-tablet: map-get($tablet, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    margin-top: $gap-mobile;
+  }
+
+  @include tablet() {
+    margin-top: $gap-tablet;
+  }
+
+  @include desktop() {
+    margin-top: $gap-desktop;
+  }
+}
+
+@mixin margin-bottom($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    margin-bottom: $gap-mobile;
+  }
+
+  @include tablet() {
+    margin-bottom: $gap-tablet;
+  }
+
+  @include desktop() {
+    margin-bottom: $gap-desktop;
+  }
+}
+
+@mixin margin($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    margin-top: $gap-mobile;
+    margin-bottom: $gap-mobile;
+  }
+
+  @include tablet() {
+    margin-top: $gap-tablet;
+    margin-bottom: $gap-tablet;
+  }
+
+  @include desktop() {
+    margin-top: $gap-desktop;
+    margin-bottom: $gap-desktop;
+  }
+}
+
+@mixin padding-top($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    padding-top: $gap-mobile;
+  }
+
+  @include tablet() {
+    padding-top: $gap-tablet;
+  }
+
+  @include desktop() {
+    padding-top: $gap-desktop;
+  }
+}
+
+@mixin padding-bottom($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    padding-bottom: $gap-mobile;
+  }
+
+  @include tablet() {
+    padding-bottom: $gap-tablet;
+  }
+
+  @include desktop() {
+    padding-bottom: $gap-desktop;
+  }
+}
+
+@mixin padding($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    padding-top: $gap-mobile;
+    padding-bottom: $gap-mobile;
+  }
+
+  @include tablet() {
+    padding-top: $gap-tablet;
+    padding-bottom: $gap-tablet;
+  }
+
+  @include desktop() {
+    padding-top: $gap-desktop;
+    padding-bottom: $gap-desktop;
+  }
+}
+
+@mixin top($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    top: $gap-mobile;
+  }
+
+  @include tablet() {
+    top: $gap-tablet;
+  }
+
+  @include desktop() {
+    top: $gap-desktop;
+  }
+}
+
+@mixin bottom($name, $mobile: $gaps-mobile, $tablet: $gaps-mobile, $desktop: $gaps-desktop) {
+  $gap-mobile: map-get($mobile, $name);
+  $gap-desktop: map-get($desktop, $name);
+
+  @include mobile() {
+    bottom: $gap-mobile;
+  }
+
+  @include tablet() {
+    bottom: $gap-tablet;
+  }
+
+  @include desktop() {
+    bottom: $gap-desktop;
+  }
+}
+
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+/** =======================================
+    Interaction Settings
+=========================================== */
+@mixin touch() {
+  @media (pointer: coarse) {
+    @content;
+  }
+}
+
+@mixin no-touch() {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
