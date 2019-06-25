@@ -8,6 +8,7 @@ web/app/plugins/*
 ######################
 !web/app/plugins/tfd
 !web/app/plugins/tfd-functionality
+!web/app/plugins/teb-functionality
 
 ######################
 # WMPL #
